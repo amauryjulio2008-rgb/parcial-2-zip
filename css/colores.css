@@ -1,0 +1,94 @@
+:root {
+/* Paleta Principal (Inspirada en IA y Ciencia de Datos) /
+--bg-primary: #0b0f19;       / Azul noche muy oscuro (Fondo principal) /
+--bg-secondary: #161b26;     / Gris/Azul oscuro (Tarjetas y contenedores) /
+--bg-accent: #1f293d;        / Azul medio para elementos secundarios/hover */
+
+--primary: #00f0ff;          /* Azul Cian Neón (Sintaxis, enlaces, resaltados) /
+--primary-hover: #00b8c4;    / Hover de cian */
+
+--secondary: #7000ff;        /* Violeta/Púrpura Eléctrico (Redes neuronales, botones) /
+--secondary-hover: #5200bc;  / Hover de púrpura */
+
+--accent: #ff007f;           /* Magenta/Rosa Neón (Avisos, destacadores) */
+
+/* Textos /
+--text-primary: #f0f4f8;     / Blanco suave para lectura principal /
+--text-secondary: #94a3b8;   / Gris claro para subtítulos y texto secundario /
+--text-muted: #64748b;       / Gris medio para marcas de agua o pie de página */
+
+/* Bordes y Sombras */
+--border-color: rgba(0, 240, 255, 0.2);
+--glow-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+--glow-purple: 0 0 15px rgba(112, 0, 255, 0.4);
+}
+
+/* Reset Básico */
+
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+background-color: var(--bg-primary);
+color: var(--text-primary);
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.6;
+}
+
+/* Enlaces */
+a {
+color: var(--primary);
+text-decoration: none;
+transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+color: #ffffff;
+text-shadow: 0 0 8px var(--primary);
+}
+
+/* Botones con estilo IA */
+.btn-ia, button {
+background: linear-gradient(135deg, var(--secondary), var(--primary));
+color: #ffffff;
+border: none;
+padding: 10px 20px;
+border-radius: 6px;
+font-weight: bold;
+cursor: pointer;
+transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-ia:hover, button:hover {
+transform: translateY(-2px);
+box-shadow: var(--glow-purple);
+}
+
+/* Tarjetas y Contenedores */
+.card, .container-box {
+background-color: var(--bg-secondary);
+border: 1px solid var(--border-color);
+border-radius: 10px;
+padding: 20px;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover, .container-box:hover {
+border-color: var(--primary);
+box-shadow: var(--glow-shadow);
+}
+
+/* Encabezados */
+h1, h2, h3, h4, h5, h6 {
+color: #ffffff;
+margin-bottom: 0.5em;
+}
+
+h1, h2 {
+background: linear-gradient(90deg, var(--primary), var(--secondary));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
